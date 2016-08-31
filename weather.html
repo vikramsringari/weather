@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<!--
+	CSE 154, Homework 5 (Weather)
+	Vikram Sringari
+	5/12/2016
+	This HTML file structures the Weather page.
+	It includes an area for search for city data,
+	for temperature, for forecast and for precipitation.
+	-->
+	
+	<head>
+		<title>Weather</title>
+		<link href="weather.css" type="text/css" rel="stylesheet" />
+		<script src="weather.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>
+			Weather
+			<span id="w3c">
+				<a href="https://webster.cs.washington.edu/validate-html.php"><img src="https://webster.cs.washington.edu/images/w3c-html.png" alt="Valid HTML" /></a>
+				<a href="https://webster.cs.washington.edu/validate-css.php"><img src="https://webster.cs.washington.edu/images/w3c-css.png" alt="Valid CSS" /></a>
+				<a href="https://webster.cs.washington.edu/jslint/?referer"><img src="https://webster.cs.washington.edu/images/w3c-js.png" alt="Valid JS" /></a>
+			</span>
+		</h1>
+
+		<div id="namearea">
+			<h2>City Name:</h2>
+
+			<div>
+				<input id="citiesinput" list="cities">
+				<datalist id="cities"></datalist>
+
+				<button id="search">
+					Search
+				</button>
+
+				<span class="loading" id="loadingnames">
+					<img src="https://webster.cs.washington.edu/images/babynames/loading.gif" alt="icon" />
+					Loading...
+				</span>
+			</div>
+		</div>
+
+		<!-- un-hide this 'resultsarea' div when you fetch data about the city -->
+		<div id="resultsarea" style="display: none;">
+			<div id="current">				
+				<div class="loading" id="loadinglocation">
+					<img src="https://webster.cs.washington.edu/images/babynames/loading.gif" alt="icon" />
+					Searching...
+				</div>
+
+				<div id="location"></div>
+			</div>
+
+			<div id="buttons">
+				<div id="currentTemp"></div>
+				<button id="temp">Temperature</button>
+				<button id="precip">Precipitation</button>
+			</div>
+
+			<div id="grapharea">
+
+				<div class="loading" id="loadinggraph">
+					<img src="https://webster.cs.washington.edu/images/babynames/loading.gif" alt="icon" />
+					Searching...
+				</div>
+				
+				<!-- if there is no data for the given city, show this error message -->
+				<div id="nodata" style="display: none;">
+					There is no temperature data for that city.
+				</div>
+
+				<!-- percipitation data should be inserted into this table -->
+				<table id="graph">
+				</table>
+				<div id="temps">
+					<input id="slider" type="range" min="0" max="24" step="3" />
+				</div>
+			</div>
+
+			<div id="forecastsarea">
+
+				<div class="loading" id="loadingforecast">
+					<img src="https://webster.cs.washington.edu/images/babynames/loading.gif" alt="icon" />
+					Searching...
+				</div>
+
+				<!-- 7 day forecast data should be inserted into this table -->
+				<table id="forecast"></table>
+			</div>
+		</div>
+		
+		<!-- an empty div for inserting any error text -->
+		<div id="errors"></div>
+	</body>
+</html>

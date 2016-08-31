@@ -1,0 +1,64 @@
+/*
+CSE 154, Homework 5 (Weather) 
+Vikram Sringari
+5/12/2016
+This CSS file styles the Weather page.
+*/
+
+body, button, input, option, select {
+	font-family: sans-serif;
+	font-size: 12pt;
+}
+
+#graph td, #temps {
+	height: 100px;
+	vertical-align: bottom;
+}
+
+#graph td div {
+	background-color: #e7f1fd;
+	border-top: 2px solid #1878f0;
+	font-weight: bold;
+	text-align: center;
+	width: 50px;
+}
+
+#currentTemp, #buttons button {
+	float: left;
+}
+
+#currentTemp {
+	font-size: 26pt;
+
+}
+
+#temp {
+	margin-left: 200px;
+}
+#graph, #temps {
+	clear: left;
+}
+
+q {
+	font-style: italic;
+}
+
+button {
+	font-size: 10pt;
+	font-weight: bold;
+	padding: 5px;
+}
+
+#location p {
+	color: grey;
+	margin: 0px;
+}
+
+
+.title { 
+	font-size: 20pt;
+}
+
+#temps input {
+	width: 350px;
+}
